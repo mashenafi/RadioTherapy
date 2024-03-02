@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+    backend:
+        volumes:
+            - static:/app/static
+            - ./RadioTh_Server/db.sqlite3:/app/data/db.sqlite3
+        env_file:
+            - ./RadioTh_Server/.env
+        build:
+            context: ./RadioTh_Server
+        ports:
+            - "8000:8000"
+    frontend:
+        build:
+            context: ./radioth
+        volumes:
+            - frontend:/app/build
+    nginx:
+        build:
+            context: ./nginx
+        volumes:
+            - static:/static
+            - frontend:/var/www/app
+        ports:
+            - "80:80"
+        depends_on:
+            - backend
+            - frontend
+
+volumes:
+    static:
+    frontend:

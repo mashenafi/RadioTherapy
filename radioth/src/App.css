@@ -1,0 +1,172 @@
+.App {
+
+  --title-font: 'Irish Grover';
+  --normal-font: 'Inria Serif';
+  --bg-color: #4E3636;
+  --fg-color:  #321E1E;
+  --highLight-color: #CD1818;
+  --complementHighLight-color: #116D6E;
+
+  text-align: center;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--normal-font);
+}
+
+.mainContainer{
+  height: inherit;
+  padding-top: 1rem;
+  overflow-y: auto;
+  width: 95%;
+  display: grid;
+  grid-template-areas: 
+  "form stats" 
+  "message stats"
+  "table stats"
+  ;
+  grid-template-rows: 18rem auto 35rem;
+  grid-template-columns: 50vw auto;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  background-color: var(--bg-color);
+}
+
+.tableContainer,.statContainer, .postFormContainer{
+  background-color: var(--fg-color);
+  border-radius: 1.5rem;
+}
+.postFormContainer{
+  grid-area: form;
+  padding-left: 1.2rem;
+} 
+.serverMessage, .noServerMessage, .serverLoading{
+  grid-area: message;
+}
+.serverMessage, .serverLoading{
+  height: 1rem;
+}
+
+.serverMessage{
+  align-items: center;
+  text-align: left;
+  color: white;
+  padding-left: 1.2rem;
+  color: pink;
+  font-size: .8rem;
+}
+.noServerMessage{
+  display: none;
+}
+
+.tableContainer{
+  grid-area: table;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  overflow: auto;
+  font-size: 12;
+  padding: 2rem 2rem;
+}
+.statContainer{
+  grid-area: stats;
+}
+.postFormContainer, .statContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postForm{
+  width: 100%;
+  /* height: 90%; */
+  padding: .5rem .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formTitle, .tableTitle{
+  font-family: var(--title-font);
+  color: white;
+  font-size: 1.1rem;
+  padding-bottom: .2rem;
+  text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.inputContainer{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  padding: 0;
+}
+.inputLabel{
+  display: flex;
+  flex-direction: column;
+  font-size: .6rem;
+  color: rgb(179, 135, 135);
+}
+.inputClass{
+  border: 1px solid black;
+  background-color: #D9D9D9;
+  font-size:.8rem;
+  width: 12rem;
+}
+
+button{
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  border: 1px solid black;
+  font-family: var(--title-font);
+  border-radius: .2rem;
+}
+.addPlanFromButton{
+  margin-left: 1rem;
+  margin-top:.2rem;
+  padding: .4rem .4rem;
+}
+button:active, button:hover{
+  transform: translate(.2rem, .2rem);
+}
+.headerRow{
+  font-size: .8rem;
+  color: white;
+}
+.headerColumn{
+  border: 2px solid var(--complementHighLight-color);
+  background-color: var(--complementHighLight-color);
+}
+.tableRow{
+  font-size: .8rem;
+}
+.normalRow{
+  background-color: var(--bg-color);
+}
+.colorfullRow{
+  background-color: var(--fg-color);
+}
+.tableTitle{
+  width: 100%;
+  text-align: center;
+  padding-bottom: .8rem;
+}
+.tableInnerContainer{
+  flex-direction: column;
+  width: fit-content;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.tableButton, .addPlanFromButton{
+  background-color: var(--highLight-color);
+  color: white;
+}

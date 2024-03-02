@@ -1,0 +1,10 @@
+MRN,Plan Name,ASC,Technique,Energy,Dose/fx,Field,ClearCheck,Complexity,MU(Mu),PD - Gamma,Beam On Time (sec),Tx Site,QA shot,Note,Obl factor 
+E123456,Prost_SV_RA,Very Low,VMAT,16MV,260,190-0,-0.60,0.19,467,98.8,-1,HH,WB,No note,no obl factor
+E123457,Ph2_Prst_SV,Moderate,VMAT,6fff,250,181-179,0.37,0.16,354,100,-1,HH,WB,No note,no obl factor
+E123458,ProstSV_Ph2,Low,VMAT,10fff,402,179-181,1.10,0.12,568,100,-1,HH,WB,No note,no obl factor
+E123459,Lt_Breast,High,VMAT,6MeV,350,181-179,1.25,0.21,467,100,-1,HH,WB,No note,no obl factor
+E123450,ProstateLNSIB,Very Low,electron,9MeV,432,179-181,-2.95,0.16,499,99.6,-1,WB,WB,No note,no obl factor
+E123451,Esophagus,Moderate,electron,16MV,325,181-179,2.42,0.18,538,99.1,-1,WB,SC,No note,no obl factor
+E123452,Pancreas,High,electron,6fff,456,179-181,3.50,0.18,537,98.9,-1,WB,SC,No note,no obl factor
+E123453,Groin,Very Low,3D,10fff,512,220-140,1.96,0.16,505,95.7,-1,WB,SC,No note,no obl factor
+E123454,Rt_Breast,Low,2D,6MeV,321,181-179,0.34,0.14,266,98.5,-1,WB,SC,No note,no obl factor
